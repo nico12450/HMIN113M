@@ -1,0 +1,4 @@
+for i in *
+do
+    grep "bonjour" i
+done
