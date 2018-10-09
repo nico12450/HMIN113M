@@ -44,6 +44,10 @@ def parcours(repertoire):
                 dico[cle] = 1
         
 parcours(chemin)
+total = 0
 
 for (extension, nombre) in dico.items():
         print(extension + " : " + str(nombre))
+        total += nombre
+        
+print("total : " + str(total))
