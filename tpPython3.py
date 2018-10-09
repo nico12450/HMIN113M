@@ -4,7 +4,7 @@
 import os,sys
 #from copy import deepcopy
 
-dico = {}
+dico = {'pasdesuffixe':0}
 chemin = ""
 
 if (len(sys.argv) == 1):
@@ -29,6 +29,10 @@ def parcours(repertoire):
         if(os.path.isfile(cheminLocal)):
 
             cle = fichier.split(".")[-1]
+
+            if(len(fichier.split("."))==1):
+                    cle = "pasdesuffixe"
+            
             print(cle)
 
             if(cle in dico.keys()):
