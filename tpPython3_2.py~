@@ -1,0 +1,14 @@
+#!/usr/bin/env
+
+import os,sys
+
+def parcours(repertoire):
+    
+    print("je suis dans " + repertoire)
+    liste = os.listdir(repertoire)
+
+    for fichier in liste:
+        print(fichier)
+
+chemin = sys.argv[1]
+parcours(chemin)
