@@ -23,11 +23,16 @@ for i in liste:
 
 	r1 = re.search(".*?\s",i)
 	r2 = re.search("[A-Z].*?\d\s",i)
-	r3 = re.search("\((.*?):(.*?)\)",i)
-	#print(r)
-	print(r1.group(0))
-	print(r2.group(0))
-	print(r3.group(1))
+	r3 = re.search("\((.*?)\:(.*?)\)",i)
+	#print(r1)
+
+	if r1:
+		print(r1.group(0))
+	if r2:
+		print(r2.group(0))
+	if r3:
+		print(r3.group(1),r3.group(2))
+		#print(str(int(r3.group(1))*60 + int(r3.group(2))))
 
           
 print("fin")
