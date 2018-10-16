@@ -20,7 +20,7 @@ def parcours(repertoire):
     for fichier in liste:
         cheminLocal = repertoire + "/" + fichier
 
-        print(fichier + str(os.path.isfile(cheminLocal)))
+        print(fichier)
 
         if(os.path.isdir(cheminLocal)):
             parcours(cheminLocal)
