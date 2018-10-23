@@ -17,7 +17,7 @@ liste = os.popen("last")
 
 for l in liste:
         #print(l)
-        login = re.search("(^.*?)\s",l)
+        login = re.search("(^.+?)\s",l)
         if login:
                 login = login.group(1)
         date=re.search("[A-Z][a-z]{2}.*?\d\d?",l)
@@ -30,7 +30,7 @@ for l in liste:
         #print(dureeSep)
         #print(login)
         if login:
-                print(login)
+                #print(login)
                 if login in connexions.keys():
                         if date:
                                 #print(date)
@@ -64,7 +64,15 @@ for l in liste:
                                                 connexions[login][date] = int(dureeSep[1]) +int(dureeSep[0])*60
                         
 
-print(connexions["reboot"]["Fri Oct 19"])
+#print(connexions["reboot"]["Fri Oct 19"])
+
+for k1 in connexions:
+	print(k1)
+	for k2 in connexions[k1]:
+		print(k2)
+                #print(connexions[k1][k2])
+
+        
                         
                                         
         
